@@ -13,6 +13,7 @@ def log_default(func):
         for_log = f'{date} was called {func.__name__} with arguments {arguments} result = {answer}\n'
         with open('logs_for_HW_1.log', 'a', encoding='UTF-8') as file:
             file.write(str(for_log))
+
         return answer
 
     return inner
@@ -31,7 +32,8 @@ def log_path(path=getcwd()):
             for_log = f'{date} in {where} was called {func.__name__} with arguments {arguments} result = {answer}\n'
             with open(path + '\logs_for_HW_2.log', 'a', encoding='UTF-8') as file:
                 file.write(r'{}'.format(for_log))
-            return answer, path
+
+            return answer
 
         return inner
 

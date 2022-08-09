@@ -1,13 +1,13 @@
-import datetime as dt
+from datetime import datetime
 from application.db.people import get_employees as hr
 from application.salary import calculate_salary as pay
 
 
 def now():
-    full = dt.datetime.now()
+    full = datetime.now()
     return full.date()
 
 
 if __name__ == '__main__':
-    hr(now())
-    pay(now())
+    print(hr(now()))
+    print(pay(now()))
