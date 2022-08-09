@@ -9,5 +9,5 @@ def now():
 
 
 if __name__ == '__main__':
-    print(hr(now()))
-    print(pay(now()))
+    hr(now())
+    pay(now())
